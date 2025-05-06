@@ -1,0 +1,260 @@
+:root {
+  --naranja: #fb5e00;
+  --celeste: #99c8c8;
+  --verde: #005a59;
+  --rosa: #f584b5;
+  --amarillo: #fcc117;
+  --rojo: #e40000;
+  --fondo: #fffaf5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--fondo);
+  color: var(--verde);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--naranja);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 800;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  
+}
+
+.hero h2 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.seccion {
+  padding: 3rem 2rem;
+}
+
+.seccion h3 {
+  color: var(--rojo);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.seccion h4 { 
+  color: #e40000;
+  font-size: 1rem;
+  
+}
+.caracteristicas {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.caracteristica {
+  background-color: var(--celeste);
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  color: #333;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: var(--verde);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 1.5rem;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--celeste);
+  font-size: 1rem;
+}
+
+.formulario button {
+  background-color: var(--naranja);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: var(--rojo);
+}
+.hero {
+  height: 100vh; /* Ocupa todo el alto de la pantalla */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir sin deformar */
+  z-index: -1; /* Coloca la imagen detrás del texto */
+}
+
+.hero h2,
+.hero p {
+  color: white;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+  
+}
+.galeria p{ 
+  color: #005a59;
+  text-align: center;
+}
+
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.galeria a {
+  text-decoration: none;
+  border: none;
+}
+
+.galeria img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.obra-detalle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  flex-wrap: wrap; /* se adapta en móviles */
+}
+
+.obra-imagen {
+  width: 33.33%; /* 1/3 del ancho */
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.obra-texto {
+  width: 66.66%; /* 2/3 del ancho */
+  max-width: 600px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.imagen-full {
+  width: 100vw;      /* 100% del ancho de la ventana */
+  height: 100vh;     /* 100% del alto de la ventana */
+  object-fit: cover; /* ajusta la imagen sin deformarla */
+  display: block;
+}
+
+.galeria3 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.galeria3 img {
+  width: 100%;
+  height: 150px; /* o el alto que prefieras */
+  object-fit: cover; /* recorta la imagen sin deformarla */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
